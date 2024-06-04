@@ -16,7 +16,7 @@ const App = () => {
     setError(null);
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:3001/chatbot', { text: inputText });
+      const res = await axios.post('https://photo-generator-haash-photo-gen.vercel.app/chatbot', { text: inputText });
       setImageUrl(res.data);
     } catch (err) {
       setError('Network Error: Could not reach the server.');
